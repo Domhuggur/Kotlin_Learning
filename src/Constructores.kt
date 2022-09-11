@@ -4,10 +4,6 @@ fun main() {
     /***** PRIMERO. Constructor Implicito Tarea *****/
     class Tarea{
         var nombre:String = ""
-        //var tipo:String = ""
-        //var cantidad:Int = 0
-        //var realizada:Boolean = false
-        //var porRealizar:Boolean = true
         fun funcionTarea(nombre:String){
             this.nombre = nombre
             println("")
@@ -23,11 +19,10 @@ fun main() {
     	}*/ 
     }
     
-    
     class Coleccion{
         var nombre:String = ""
         
-        /***** PRIMERO. Constructor Implicito Tarea *****/
+        /***** PRIMERO. Llamada al Constructor Implicito Tarea *****/
         var objetoTarea:Tarea = Tarea()
         var dameFuncionClaseTarea = objetoTarea.funcionTarea(nombre = "Hacer los deberes")
         

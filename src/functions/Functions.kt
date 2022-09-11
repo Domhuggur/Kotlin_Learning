@@ -1,3 +1,5 @@
+package functions
+
 class Functions{
     fun whatTypeOfVariableItIs(type:Any):String{
         return when(type){
@@ -7,5 +9,8 @@ class Functions{
             is Boolean -> "It's a variable of type  Boolean"
             else -> "It isn't a variable of known type"
         }
+    }
+    fun voidFunction(){
+        print("This is a void function")
     }
 }
