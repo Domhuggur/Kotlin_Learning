@@ -26,7 +26,7 @@ import java.lang.reflect.Type
     println("Vamos a darle a las colecciones y los arrays!") 
 	
 	fun giveMeTaks(){
-        val objetoTarea = CollectionsAndArrays(name:"deberes", arrayOf
+        val objetoTarea = CollectionsAndArrays(name = "deberes", arrayOf
         (CollectionsAndArrays.Type.Diarias))
         //var listaTareas:MutableList<Tarea> = mutableListOf()
         //listaTareas.add(objetoTarea)
