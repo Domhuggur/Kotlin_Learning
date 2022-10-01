@@ -1,9 +1,11 @@
-package mainActivity
-
-import functions.Functions
+package kotlin_learning
+import java.util.*
 
 class MainActivity {
-
+    private fun extensions(){
+        val myDate = Date()
+        println(myDate.customFormat())
+    }
 }
 fun main() {
     var objectFunctions: Functions = Functions()
@@ -11,4 +13,5 @@ fun main() {
     fun printMeVar() {
         print(giveMeFunctionsObject)
     }
+
 }

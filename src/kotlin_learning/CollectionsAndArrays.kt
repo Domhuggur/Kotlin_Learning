@@ -1,4 +1,4 @@
-package collectionsAndArrays
+package kotlin_learning
 
 import java.lang.reflect.Type
 

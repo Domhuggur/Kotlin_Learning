@@ -1,4 +1,4 @@
-package functions
+package kotlin_learning
 
 class Functions{
     fun whatTypeOfVariableItIs(type:Any):String{
