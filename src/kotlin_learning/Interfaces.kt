@@ -1,5 +1,6 @@
+//https://kotlinlang.org/docs/interfaces.html
 interface Bird {
-    /* An Interface can't be instantiate therefore no constructor can be defined*/
+    /* An Interface can't be instantiated therefore no constructor can be defined*/
     var energy: Int
     fun fly(minutes:Int){
         energy = energy - (minutes * 2)
