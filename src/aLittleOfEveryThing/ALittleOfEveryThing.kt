@@ -2,21 +2,29 @@ package aLittleOfEveryThing
 
 class ALittleOfEveryThing {
 }
+ fun main() {
+     /*==> HELLO WORLD <==*/
+     println("Hello, world!!!")
 
-// --- 1. Introduction ---
-//--> 1.1. Hello world
-fun main() {
-    println("Hello, world!!!")
-    //To understand this go to ==> 1.5. Classes
-    val person1 = BodyAndHeadIsGreat("squareHead", "butCurvyBody")
-    println(person1)
-    //To understand this go to ==> 1.6. Inheritance
-    val suitMan1 = executive()
-    println(suitMan1.giveMeSalary())
-    val workMan1 = worker()
-    println(workMan1.giveMeSalary())
+    /*==> NULL SAFETY <==*/
+    var neverNull: String = "This can't be null"
+    //neverNull = null
+    var nullispossible: String? = "You can keep a null here"
+    nullispossible = null //Is possible to change the value to null
+
+     //To understand this go to ==> CLASSES
+    val person1 = BodyAndHeadIsGreat("squareHead", "curvyBody")
+    println(person1.giveMeHeadAndBody())
+
+     //To understand this go to ==> INHERITANCE
+    val suitMain1 = Executive()
+     println(suitMain1.giveMeSalary())
+     val workMan1 = Worker()
+     println(workMan1.giveMeSalary())
+
 }
-//--> 1.2. Funciones
+
+/*==> FUNCTIONS <==*/
 class Functions{
     fun whatTypeOfVariableItIs(type:Any):String{
         return when(type){
@@ -28,42 +36,41 @@ class Functions{
         }
     }
 }
-//--> 1.3. Variables
+/*==> VARIABLES <==*/
 class Variables{
     val number:Int = 1
     val otherNumber = 2 //Inferred Int
     val anotherUmmWordThisTime:String = "Beeep" //I wanna be human
+    var anotherNumber:Int = 3 //'var' keyword is used to reassigned a variable   
+}
 
-    var anotherNumber:Int = 3
-    var anotherNumber:Int = 1 //'var' keyword is used to reassigned a variable
-}
-//--> 1.4. Null Safety
-class NullSafety{
-    var neverNull: String = "This can't be null"
-    neverNull = null
-    var nullable: String? = "You can keep a null here"
-    nullable = null
-}
-//--> 1.5. Classes
+/*==> CLASSES <==*/
 class NoBodyNoParty// No header and no body so no brakes and no curly braces
 class NoHeadNoWorry(val id: Int, var email: String)// No body no curly braces
 class BodyAndHeadIsGreat(val head:String, var body:String){
-    /*Like this way we can instanciate the class in the ***main method*** (see there)
+    /*Like this way we can instantiate the class in the ***main method*** (see there)
      * and give values to the parameters*/
-}
-//--> 1.6. Inheritance
-open class employee(){
-    var salary:Int = 0
-    public fun giveMeSalary(){
-        println("The salary is: $salary eurodollars")
+    fun giveMeHeadAndBody(){
+        println("The head is $head and the body is $body")
     }
 }
-class executive:employee(){
-    override var salary = 80000
+/*==> INHERITANCE <==*/
+open class Employee(val salary:Int = 0, var name:String = ""){
+
+    open fun giveMeSalary(){
+        println("The salary of the $name is: $salary eurodollars")
+    }
 }
-class worker:employee(){
-    override var salary = 30000
+class Executive(salary: Int = 80000, name:String = "executive"):Employee
+                                                                    (salary,
+                                                                     name){
 }
-/*Now you can see in the ***main method***  how when we instanciate a class which is
+class Worker(salary: Int = 40000, name: String = "worker"):Employee(salary,
+                                                                    name){
+}
+
+/*Now you can see in the ***main method***  how when we instantiate a class which is
  * hereditary from other and you put the keyword 'override' you can change the
  * value of a variable or method*/
+  
+ 
